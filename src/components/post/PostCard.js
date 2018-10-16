@@ -12,7 +12,7 @@ class PostCard extends Component {
             sagittis ipsum id neque volutpat euismod. Nam vel magna ac
             lectus fringilla gravida ac id magna...
           </p>
-          <div className="flex justify-between px-2 py-2 text-grey-dark">
+          <div className="flex justify-between mt-4 text-grey-dark">
             <p className="text-sm">Posted by Herisson Silva</p>
             <p className="text-sm">13 of september, 5pm</p>
           </div>
