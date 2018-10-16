@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/App'
+import IndexRouter from './routes/index'
 
-import './assets/style.css'
+import "./assets/style.sass"
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<IndexRouter />, document.getElementById('app'))

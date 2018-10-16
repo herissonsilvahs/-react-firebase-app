@@ -1,0 +1,51 @@
+@tailwind preflight
+
+@tailwind components
+
+a
+  @apply no-underline text-blue
+
+.btn
+  @apply py-2 px-5 rounded
+
+.btn-blue-light
+  @apply bg-blue-light text-white
+
+.btn-blue-light
+  @apply bg-blue-light text-white
+
+.nav-menu
+  @apply list-reset
+
+  &.inline
+    .nav-item
+      @apply inline-block px-2
+
+  .nav-item
+    .nav-link
+      @apply text-white
+
+      &:hover
+        @apply text-blue-light
+
+.container
+  @apply mx-auto px-8
+
+@tailwind utilities
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+.navbar
+  @apply w-full flex fixed py-3 bg-black shadow-lg
+
+  .container
+    @apply flex justify-between items-center
+
+  .nav-brand
+    @apply flex text-3xl text-white items-center
+
+    img
+      @apply h-10 ml-1
