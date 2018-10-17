@@ -1,9 +1,14 @@
 @tailwind preflight
 
 @tailwind components
+body
+  background: linear-gradient(to right, #eff8ff, #ffffff)
 
 a
   @apply no-underline text-blue
+
+input
+  @apply outline-none
 
 .btn
   @apply py-2 px-5 rounded
@@ -13,6 +18,21 @@ a
 
 .btn-blue-dark
   @apply bg-blue-dark text-white
+
+  &:hover
+      @apply bg-blue
+
+.input
+  @apply py-1 px-2 bg-transparent bg-white text-grey-darker
+
+  &.blue-dark
+    @apply border border-blue-dark
+
+    &:hover
+      @apply border-blue
+
+  &.shadow
+    box-shadow: -6px 3px 25px #bcdefa
 
 .nav-menu
   @apply list-reset

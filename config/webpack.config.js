@@ -14,13 +14,17 @@ module.exports = {
     contentBase: path.resolve(__dirname, "../"),
     overlay: true,
     clientLogLevel: "warning",
-    compress: true,
-    inline: true
+    hot: true,
+    inline: true,
+    noInfo: true
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
   },
   module: {
     rules: [
       {
-        test: /\.js$|.jsx$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
@@ -47,16 +51,17 @@ module.exports = {
         test: /\.(jpg|png|gif|svg|pdf|ico)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[path][name]-[hash:8].[ext]'
-            },
-          },
+              name: "[path][name]-[hash:8].[ext]"
+            }
+          }
         ]
       }
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "index.html",

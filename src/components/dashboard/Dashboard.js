@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ListPost from '../post/ListPost'
-import LatestPost from '../post/LatestPost'
+import LatestPost from '../post/latestPost/LatestPost'
 
 class Dashboard extends Component {
   render() {
